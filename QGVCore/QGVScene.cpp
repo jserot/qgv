@@ -278,22 +278,24 @@ void QGVScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
 #include <QPainter>
 void QGVScene::drawBackground(QPainter * painter, const QRectF & rect)
 {
-    const int gridSize = 25;
+  Q_UNUSED(painter);
+  Q_UNUSED(rect);
+    // const int gridSize = 25;
 
-    const qreal left = int(rect.left()) - (int(rect.left()) % gridSize);
-    const qreal top = int(rect.top()) - (int(rect.top()) % gridSize);
+    // const qreal left = int(rect.left()) - (int(rect.left()) % gridSize);
+    // const qreal top = int(rect.top()) - (int(rect.top()) % gridSize);
 
-    QVarLengthArray<QLineF, 100> lines;
+    // QVarLengthArray<QLineF, 100> lines;
 
-    for (qreal x = left; x < rect.right(); x += gridSize)
-        lines.append(QLineF(x, rect.top(), x, rect.bottom()));
-    for (qreal y = top; y < rect.bottom(); y += gridSize)
-        lines.append(QLineF(rect.left(), y, rect.right(), y));
+    // for (qreal x = left; x < rect.right(); x += gridSize)
+    //     lines.append(QLineF(x, rect.top(), x, rect.bottom()));
+    // for (qreal y = top; y < rect.bottom(); y += gridSize)
+    //     lines.append(QLineF(rect.left(), y, rect.right(), y));
 
-    painter->setRenderHint(QPainter::Antialiasing, false);
+    // painter->setRenderHint(QPainter::Antialiasing, false);
 
-    painter->setPen(QColor(Qt::lightGray).lighter(110));
-    painter->drawLines(lines.data(), lines.size());
-    painter->setPen(Qt::black);
-    //painter->drawRect(sceneRect());
+    // painter->setPen(QColor(Qt::lightGray).lighter(110));
+    // painter->drawLines(lines.data(), lines.size());
+    // painter->setPen(Qt::black);
+    // //painter->drawRect(sceneRect());
 }

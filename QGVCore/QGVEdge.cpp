@@ -139,12 +139,13 @@ void QGVEdge::updateLayout()
     _pen.setStyle(QGVCore::toPenStyle(getAttribute("style")));
 
     //Edge label
-		textlabel_t *xlabel = ED_xlabel(_edge->edge());
+    textlabel_t *xlabel = ED_xlabel(_edge->edge());
     if(xlabel)
     {
         _label = xlabel->text;
-        _label_rect.setSize(QSize(xlabel->dimen.x, xlabel->dimen.y));
-				_label_rect.moveCenter(QGVCore::toPoint(xlabel->pos, QGVCore::graphHeight(_scene->_graph->graph())));
+        int nb_lines = _label.contains('\n') ? 3 : 1; 
+        _label_rect.setSize(QSize(xlabel->dimen.x*1.3, xlabel->dimen.y*nb_lines));
+        _label_rect.moveCenter(QGVCore::toPoint(xlabel->pos, QGVCore::graphHeight(_scene->_graph->graph())));
     }
 
     setToolTip(getAttribute("tooltip"));
