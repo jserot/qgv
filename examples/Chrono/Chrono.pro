@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QMAKE_MACOSX_DEPLOYMENT_TARGET = 12.6
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,12 +15,12 @@ TEMPLATE = app
 DESTDIR = ../bin
 
 #QGVCore librairie
-LIBS += -L$$OUT_PWD/../lib -lQGVCore
-INCLUDEPATH += $$PWD/../QGVCore
-DEPENDPATH += $$PWD/../QGVCore
+LIBS += -L$$OUT_PWD/../../lib -lQGVCore
+INCLUDEPATH += $$PWD/../../QGVCore
+DEPENDPATH += $$PWD/../../QGVCore
 
 #GraphViz librairie
-!include(../QGVCore/GraphViz.pri) {
+!include(../../QGVCore/GraphViz.pri) {
      error("fail open GraphViz.pri")
  }
 
@@ -32,5 +33,5 @@ HEADERS  += MainWindow.h \
 
 FORMS    += MainWindow.ui
 
-RESOURCES += \
-    ress.qrc
+#RESOURCES += \
+#    ress.qrc
