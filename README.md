@@ -1,3 +1,5 @@
+This is a fork of [QGV](https://github.com/nbergont/qgv.git)
+
 Interactive Qt graphViz display
 ===============================
 
