@@ -59,6 +59,7 @@ QPolygonF QGVCore::toPolygon(const polygon_t *poly, qreal width, qreal height)
 QPainterPath QGVCore::toPath(const char *type, const polygon_t *poly, qreal width, qreal height)
 {
     QPainterPath path;
+    qDebug() << "QGVCore::toPath: shape=" << type << "width=" << width << "height=" << height;
     if ((strcmp(type, "rectangle") == 0) ||
         (strcmp(type, "box") == 0) ||
         (strcmp(type, "hexagon") == 0) ||
@@ -70,10 +71,15 @@ QPainterPath QGVCore::toPath(const char *type, const polygon_t *poly, qreal widt
         path.addPolygon(polygon);
     }
     else if ((strcmp(type, "ellipse") == 0) ||
-            (strcmp(type, "circle") == 0))
+             (strcmp(type, "circle") == 0))
     {
         QPolygonF polygon = toPolygon(poly, width, height);
+        qDebug() << "QGVCore::toPath: polygon[0]=" << polygon[0] << "polygon[1]=" << polygon[1];
         path.addEllipse(QRectF(polygon[0], polygon[1]));
+    }
+    else if ((strcmp(type, "none") == 0))
+    {
+      // Nothing
     }
     else
     {

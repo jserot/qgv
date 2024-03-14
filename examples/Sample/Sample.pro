@@ -12,7 +12,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Sample
 TEMPLATE = app
 
-DESTDIR = ../bin
+DESTDIR = ./bin
 
 #QGVCore librairie
 LIBS += -L$$OUT_PWD/../../lib -lQGVCore

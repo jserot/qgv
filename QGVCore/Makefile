@@ -17,7 +17,7 @@ CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 DEFINES       = -DWITH_CGRAPH -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -fPIC $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.6 -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -DQGVCORE_LIB -O2 -fPIC -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.6 -Wall -Wextra $(DEFINES)
-INCPATH       = -I. -Iprivate -I/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz -I../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers -I../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers -I../../../../Qt/6.3.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Qt/6.3.1/macos/mkspecs/macx-clang -F/Users/jserot/Qt/6.3.1/macos/lib
+INCPATH       = -I. -Iprivate -I/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz -I../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers -I../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers -I../../../../Qt/6.3.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Qt/6.3.1/macos/mkspecs/macx-clang -F/Users/jserot/Qt/6.3.1/macos/lib
 QMAKE         = /Users/jserot/Qt/6.3.1/macos/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -910,7 +910,7 @@ moc_QGVScene.cpp: QGVScene.h \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
 		../../../../Qt/6.3.1/macos/libexec/moc
-	/Users/jserot/Qt/6.3.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=13 -D__clang_minor__=1 -D__clang_patchlevel__=6 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jserot/Qt/6.3.1/macos/mkspecs/macx-clang -I/Users/jserot/Dev/Qt/qgv/QGVCore -I/Users/jserot/Dev/Qt/qgv/QGVCore/private -I/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz -I/Users/jserot/Qt/6.3.1/macos/lib/QtWidgets.framework/Headers -I/Users/jserot/Qt/6.3.1/macos/lib/QtGui.framework/Headers -I/Users/jserot/Qt/6.3.1/macos/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/jserot/Qt/6.3.1/macos/lib QGVScene.h -o moc_QGVScene.cpp
+	/Users/jserot/Qt/6.3.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=13 -D__clang_minor__=1 -D__clang_patchlevel__=6 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jserot/Qt/6.3.1/macos/mkspecs/macx-clang -I/Users/jserot/Dev/Qt/qgv/QGVCore -I/Users/jserot/Dev/Qt/qgv/QGVCore/private -I/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz -I/Users/jserot/Qt/6.3.1/macos/lib/QtWidgets.framework/Headers -I/Users/jserot/Qt/6.3.1/macos/lib/QtGui.framework/Headers -I/Users/jserot/Qt/6.3.1/macos/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/jserot/Qt/6.3.1/macos/lib QGVScene.h -o moc_QGVScene.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -955,17 +955,17 @@ QGVScene.o: QGVScene.cpp QGVScene.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qpainterpath.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/QColor \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h \
 		private/QGVGraphPrivate.h \
 		private/QGVGvcPrivate.h \
 		private/QGVEdgePrivate.h \
@@ -995,17 +995,17 @@ QGVNode.o: QGVNode.cpp QGVNode.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qpainterpath.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/QColor \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h \
 		QGVScene.h \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
@@ -1034,17 +1034,17 @@ QGVEdge.o: QGVEdge.cpp QGVEdge.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qpainterpath.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/QColor \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h \
 		QGVScene.h \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
@@ -1073,17 +1073,17 @@ QGVSubGraph.o: QGVSubGraph.cpp QGVSubGraph.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qpainterpath.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/QColor \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h \
 		QGVScene.h \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../../Qt/6.3.1/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
@@ -1105,48 +1105,48 @@ QGVCore.o: private/QGVCore.cpp private/QGVCore.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qpainterpath.h \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/QColor \
 		../../../../Qt/6.3.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h \
 		../../../../Qt/6.3.1/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Qt/6.3.1/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QGVCore.o private/QGVCore.cpp
 
 QGVGraphPrivate.o: private/QGVGraphPrivate.cpp private/QGVGraphPrivate.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QGVGraphPrivate.o private/QGVGraphPrivate.cpp
 
 QGVGvcPrivate.o: private/QGVGvcPrivate.cpp private/QGVGvcPrivate.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvc.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/types.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/geom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/arith.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvcext.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/pathgeom.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/textspan.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/usershape.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/gvplugin.h
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvc.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/types.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/geom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/arith.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvcext.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/pathgeom.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/textspan.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/usershape.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/gvplugin.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QGVGvcPrivate.o private/QGVGvcPrivate.cpp
 
 QGVEdgePrivate.o: private/QGVEdgePrivate.cpp private/QGVEdgePrivate.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QGVEdgePrivate.o private/QGVEdgePrivate.cpp
 
 QGVNodePrivate.o: private/QGVNodePrivate.cpp private/QGVNodePrivate.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cgraph.h \
-		/opt/homebrew/Cellar/graphviz/9.0.0/include/graphviz/cdt.h
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cgraph.h \
+		/opt/homebrew/Cellar/graphviz/10.0.1/include/graphviz/cdt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QGVNodePrivate.o private/QGVNodePrivate.cpp
 
 ####### Install
