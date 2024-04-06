@@ -15,9 +15,9 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library.
 ***************************************************************/
-#include "MainWindow.h"
-#include "moc_MainWindow.cpp"
-#include "ui_MainWindow.h"
+#include "mainWindow.h"
+#include "moc_mainWindow.cpp"
+#include "ui_mainWindow.h"
 #include "QGVScene.h"
 #include "QGVNode.h"
 #include "QGVEdge.h"

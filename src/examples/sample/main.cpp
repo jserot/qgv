@@ -15,7 +15,7 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library.
 ***************************************************************/
-#include "MainWindow.h"
+#include "mainWindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

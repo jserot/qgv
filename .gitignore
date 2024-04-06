@@ -1,3 +1,13 @@
-examples/*bin/*
-moc_*.cpp
-moc_*.h
+.DS_Store
+*~
+*.o
+*.a
+moc_*.*
+qrc_resources.*
+src/lib/Makefile.*
+src/examples/sample/sample.app/
+src/examples/chrono/chrono.app/
+dist/macos/bin/*.app/
+dist/macos/bin.*.dmg
+dist/windows/bin/*_setup.exe
+config
