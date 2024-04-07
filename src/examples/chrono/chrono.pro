@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2013-04-17T09:06:06
-#
-#-------------------------------------------------
-
 !include(../../../config) { error("Cannot open config file. Run configure script in top directory") }
 
 QT       += core gui widgets

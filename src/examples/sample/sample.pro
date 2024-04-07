@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2013-04-17T09:06:06
-#
-#-------------------------------------------------
-
 !include(../../../config) { error("Cannot open config file. Run configure script in top directory") }
 
 QT       += core gui widgets
@@ -11,8 +5,6 @@ QMAKE_MACOSX_DEPLOYMENT_TARGET = 12.6
 
 TARGET = sample
 TEMPLATE = app
-
-#DESTDIR = ./bin
 
 #QGVCore librairie
 LIBS += -L$$OUT_PWD/../../../dist/$$PLATFORM_TYPE/lib -lQGVCore
