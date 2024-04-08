@@ -80,6 +80,7 @@ clean:
 	rm -f moc_*.*	
 
 clobber: 
+	rm -f moc_*.*	
 	rm -f $(MAKEFILE)
 	rm -rf $(MAKEFILE).{debug,release}
 	rm -rf {debug,release}
