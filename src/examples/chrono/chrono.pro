@@ -13,7 +13,7 @@ LIBS += -L$$OUT_PWD/../../../dist/$$PLATFORM_TYPE/lib -lQGVCore
 INCLUDEPATH += $$PWD/../../../dist/$$PLATFORM_TYPE/lib
 DEPENDPATH += $$PWD/../../../dist/$$PLATFORM_TYPE/lib
 
-!include(../../../dist/$$PLATFORM_TYPE/lib/GraphViz.pri) { error("Cannot open GraphViz.pri file. Make deploy in lib src directory") }
+!include(../../../dist/$$PLATFORM_TYPE/lib/GraphViz.pri) { error("Cannot open GraphViz.pri file. Make dist in lib src directory") }
 
 SOURCES += main.cpp\
         mainWindow.cpp \

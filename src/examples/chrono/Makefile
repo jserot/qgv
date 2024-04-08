@@ -45,7 +45,7 @@ GRAPHVIZ_DLLS=\
 	/ucrt64/bin/libgvplugin_pango-6.dll \
 	/ucrt64/bin/libgvplugin_dot_layout-6.dll 
 
-all: build
+all: qmake build run dist
 
 qmake: $(APPNAME).pro
 	$(QMAKE) -o $(MAKEFILE) $(APPNAME).pro
@@ -61,7 +61,7 @@ ifeq ($(PLATFORM_TYPE), macos)
 	open ./$(APPNAME).app
 endif
 
-deploy:
+dist:
 ifeq ($(PLATFORM_TYPE), windows)
 	rm -rf $(DIST_DIR)/windows/bin/*
 	cp release/$(APPNAME).exe $(DIST_DIR)/windows/bin

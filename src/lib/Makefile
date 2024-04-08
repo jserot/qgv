@@ -7,7 +7,7 @@ MAKEFILE=Makefile.$(PLATFORM)
 
 DIST_DIR=../../dist
 
-all: build
+all: qmake build dist
 
 qmake: $(LIBNAME).pro
 	$(QMAKE) -o $(MAKEFILE) $(LIBNAME).pro
@@ -15,12 +15,11 @@ qmake: $(LIBNAME).pro
 build: $(MAKEFILE)
 	make -f $(MAKEFILE)
 
-deploy:
+dist:
 ifeq ($(PLATFORM_TYPE), windows)
 	cp release/lib$(LIBNAME).a $(DIST_DIR)/windows/lib
 	cp *.h $(DIST_DIR)/windows/lib
 	cp *.pri $(DIST_DIR)/windows/lib
-#	cp $(EXTDLLS)/*.dll ./release
 endif
 ifeq ($(PLATFORM_TYPE), macos)
 	cp lib$(LIBNAME).a $(DIST_DIR)/macos/lib

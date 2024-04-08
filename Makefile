@@ -4,6 +4,11 @@ include ./config # All platform-dependent defns are here
 
 MAKEFILE=Makefile.$(PLATFORM)
 
+all:
+	(cd src/lib; make all)
+	(cd src/examples/sample; make all)
+	(cd src/examples/chrono; make all)
+
 clean:
 	(cd src/lib; make clean)
 	(cd src/examples/sample; make -f $(MAKEFILE) clean)
