@@ -2,6 +2,8 @@ DEFINES += WITH_CGRAPH
 INCLUDEPATH += private
 QMAKE_CXXFLAGS += -DQGVCORE_LIB
 
+include(../../config)
+
 unix {
  message("Building for unix")
  CONFIG += link_pkgconfig
@@ -14,11 +16,18 @@ win32 {
  INCLUDEPATH += /ucrt64/include/graphviz
  LIBS += -L/ucrt64/lib -lgvc -lcgraph -lcdt # -lgraph
 }
+
+
 macx {
  message("Building for macx")
  # Enable pkg-config (pkg-config is disabled by default in the Qt package for mac)
  QT_CONFIG -= no-pkg-config
- # pkg-config location if your brew installation is standard
- PKG_CONFIG = /usr/local/bin/pkg-config
+ equals(PLATFORM,qt6-macm1) {
+   PKG_CONFIG = /opt/homebrew/bin/pkg-config
+   }
+  else {
+   PKG_CONFIG = /usr/local/bin/pkg-config
+  }
+ # message($$PKG_CONFIG)
  PKGCONFIG -= libgraph
 }
