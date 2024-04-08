@@ -17,8 +17,10 @@ build: $(MAKEFILE)
 
 deploy:
 ifeq ($(PLATFORM_TYPE), windows)
-	(cd release; $(WINDEPLOYQT) $(LIBNAME).exe)
-	cp $(EXTDLLS)/*.dll ./release
+	cp release/lib$(LIBNAME).a $(DIST_DIR)/windows/lib
+	cp *.h $(DIST_DIR)/windows/lib
+	cp *.pri $(DIST_DIR)/windows/lib
+#	cp $(EXTDLLS)/*.dll ./release
 endif
 ifeq ($(PLATFORM_TYPE), macos)
 	cp lib$(LIBNAME).a $(DIST_DIR)/macos/lib
@@ -28,6 +30,7 @@ endif
 
 clean:
 	make -f $(MAKEFILE) clean
+	rm -f moc_*.{cpp,h}
 
 clobber: 
 	rm -f $(MAKEFILE)

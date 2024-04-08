@@ -5,6 +5,8 @@
 moc_*.*
 qrc_resources.*
 src/lib/Makefile.*
+src/lib/debug/
+src/lib/release/
 src/examples/sample/sample.app/
 src/examples/chrono/chrono.app/
 dist/macos/bin/*.app/

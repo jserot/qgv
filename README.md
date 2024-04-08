@@ -2,6 +2,11 @@ This is a fork of the [QGV](https://github.com/nbergont/qgv.git) library with mi
 in the [SSDE](https://github.com/jserot/ssde.git) and
 [Rfsm-Light](https://github.com/jserot/rfsm-light.git) projects.
 
+### To configure for a target platform
+
+- `./configure -platform <platform>`
+
+
 ### To build the library 
 
 - `cd src/lib`
@@ -11,14 +16,19 @@ in the [SSDE](https://github.com/jserot/ssde.git) and
 
 This will install in `../../dist/<platform>/lib`
 
-### To build the examples
+### To build and run the examples from the CL
 
 - `cd src/examples/<example>`
 - `make qmake`
 - `make`
+- `make run`
+
+### To build the examples as clickable applications
+
+- `cd src/examples/<example>`
 - `make deploy`
 
-This will install in `../../dist/<platform>/bin`
+This will put the application in `../../dist/<platform>/bin`.
 
 
 

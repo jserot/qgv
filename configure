@@ -32,7 +32,7 @@ case "$platform" in
       echo "QMAKE=/ucrt64/bin/qmake6.exe" >> config;
       echo "QMAKE_SPEC=" >> config;
       echo "WINDEPLOYQT=/ucrt64/bin/windeployqt6.exe" >> config;
-      echo "EXTDLLS=../../extdlls/ucrt64" >> config;;
+      echo "DLLDIR=/ucrt64/bin" >> config;;
   qt5-macx86)
       echo "PLATFORM_TYPE=macos" >> config;
       echo "PLATFORM=qt5-macx86" >> config;

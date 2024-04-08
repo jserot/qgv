@@ -1,4 +1,3 @@
-#GraphViz librairie
 DEFINES += WITH_CGRAPH
 INCLUDEPATH += private
 QMAKE_CXXFLAGS += -DQGVCORE_LIB
@@ -6,16 +5,14 @@ QMAKE_CXXFLAGS += -DQGVCORE_LIB
 unix {
  message("Building for unix")
  CONFIG += link_pkgconfig
- PKGCONFIG += libcdt libgvc libcgraph libgraph
+ PKGCONFIG += libcdt libgvc libcgraph # libgraph 
 }
 win32 {
  message("Building for win32")
- #Configure Windows GraphViz path here :
- GRAPHVIZ_PATH = "D:/Program Files (x86)/Graphviz2.36/"
  DEFINES += WIN32_DLL
  DEFINES += GVDLL
- INCLUDEPATH += $$GRAPHVIZ_PATH/include/graphviz
- LIBS += -L$$GRAPHVIZ_PATH/lib/release/lib -lgvc -lcgraph -lgraph -lcdt
+ INCLUDEPATH += /ucrt64/include/graphviz
+ LIBS += -L/ucrt64/lib -lgvc -lcgraph -lcdt # -lgraph
 }
 macx {
  message("Building for macx")
@@ -23,6 +20,5 @@ macx {
  QT_CONFIG -= no-pkg-config
  # pkg-config location if your brew installation is standard
  PKG_CONFIG = /usr/local/bin/pkg-config
- # libgraph is no longer present in last graphviz version
- PKGCONFIG -= libgraph # libcdt libgvc libcgraph
+ PKGCONFIG -= libgraph
 }

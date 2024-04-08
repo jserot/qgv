@@ -3,9 +3,47 @@
 include ../../../config # All platform-dependent defns are here
 
 APPNAME=sample
+CONFIG += console #debug
 MAKEFILE=Makefile.$(PLATFORM)
 
 DIST_DIR=../../../dist
+
+EXT_DLLS=\
+	/ucrt64/bin/libb2-1.dll \
+	/ucrt64/bin/libbrotlicommon.dll \
+	/ucrt64/bin/libbrotlidec.dll \
+	/ucrt64/bin/libbz2-1.dll \
+	/ucrt64/bin/libdouble-conversion.dll \
+	/ucrt64/bin/libfreetype-6.dll \
+	/ucrt64/bin/libgcc_s_seh-1.dll \
+	/ucrt64/bin/libglib-2.0-0.dll \
+	/ucrt64/bin/libgraphite2.dll \
+	/ucrt64/bin/libharfbuzz-0.dll \
+	/ucrt64/bin/libiconv-2.dll \
+	/ucrt64/bin/libicudt74.dll \
+	/ucrt64/bin/libicuin74.dll \
+	/ucrt64/bin/libicuuc74.dll \
+	/ucrt64/bin/libintl-8.dll \
+	/ucrt64/bin/libmd4c.dll \
+	/ucrt64/bin/libpcre2-16-0.dll \
+	/ucrt64/bin/libpcre2-8-0.dll \
+	/ucrt64/bin/libpng16-16.dll \
+	/ucrt64/bin/libstdc++-6.dll \
+	/ucrt64/bin/libwinpthread-1.dll \
+	/ucrt64/bin/libzstd.dll \
+	/ucrt64/bin/zlib1.dll
+
+GRAPHVIZ_DLLS=\
+	/ucrt64/bin/libcgraph-6.dll \
+	/ucrt64/bin/libgvc-6.dll \
+	/ucrt64/bin/libcdt-5.dll \
+	/ucrt64/bin/libpathplan-4.dll \
+	/ucrt64/bin/libxdot-4.dll \
+	/ucrt64/bin/libexpat-1.dll \
+	/ucrt64/bin/libltdl-7.dll \
+	/ucrt64/bin/config6 \
+	/ucrt64/bin/libgvplugin_pango-6.dll \
+	/ucrt64/bin/libgvplugin_dot_layout-6.dll 
 
 all: build
 
@@ -25,8 +63,12 @@ endif
 
 deploy:
 ifeq ($(PLATFORM_TYPE), windows)
-	(cd release; $(WINDEPLOYQT) $(APPNAME).exe)
-	cp $(EXTDLLS)/*.dll ./release
+	rm -rf $(DIST_DIR)/windows/bin/*
+	cp release/$(APPNAME).exe $(DIST_DIR)/windows/bin
+	(cd $(DIST_DIR)/windows/bin; $(WINDEPLOYQT) $(APPNAME).exe)
+	cp $(EXT_DLLS) $(DIST_DIR)/windows/bin
+	cp $(EXT_DLLS) $(DIST_DIR)/windows/bin
+	cp $(GRAPHVIZ_DLLS) $(DIST_DIR)/windows/bin
 endif
 ifeq ($(PLATFORM_TYPE), macos)
 	rm -rf $(DIST_DIR)/macos/bin/$(APPNAME).app
@@ -35,6 +77,7 @@ endif
 
 clean:
 	make -f $(MAKEFILE) clean
+	rm -f moc_*.*	
 
 clobber: 
 	rm -f $(MAKEFILE)
